@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {saveToStorage, loadFromStorage} from './module/LocalStorage.js';
 import {timeSince} from './module/timeSince.js';
+import {url} from './url.js';
 
 
 export default class CurrencyList extends Component {
@@ -30,7 +31,7 @@ export default class CurrencyList extends Component {
 		main.setState({
 			infoStatus: 'loading',
 		});
-		fetch('http://localhost:8080/myrestfullapp/cotizacion/dolar', {//'http://demo4365064.mockable.io/', {
+		fetch(url, {//'http://demo4365064.mockable.io/', {
 			method: 'GET',
      		headers: {
      			'Accept': 'application/json',
